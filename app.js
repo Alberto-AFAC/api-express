@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');
 app.use(history());
-app.use(express.static(path.join(__dirname, 'public/index.html')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('puerto', process.env.PORT || 3000);
 app.listen(app.get('puerto'), () => {
